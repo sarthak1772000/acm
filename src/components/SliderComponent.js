@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState,Component } from 'react';
 import {
   Carousel,
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption
+  CarouselCaption,
+  Container, Row, Col
 } from 'reactstrap';
 
-const items = [
+/*const items = [
   {
     src: '../../public/images/hackathon_main_poster@8x.png',
     altText: 'Slide 1',
@@ -72,5 +73,57 @@ const Slider = (props) => {
     </Carousel>
   );
 }
+*/
+ class Slider extends Component {
+  render(){
+    return(
+      <div class="container">
+        <div class="row row-content">
+            <div class="col">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active"> 
+                            <img class="d-block img-fluid"
+                                src="img/uthappizza.png" alt="uthappizza">
+                            <div class="carousel-caption d-none d-block">
+                                <h2>Uthappizza <span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-secondary">$4.99</span></h2>
+                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>    
+                            </div>
+                        </div>
+                        <div class="carousel-item"> 
+                            <img class="d-block img-fluid"
+                                src="img/buffet.png" alt="uthappizza">
+                            <div class="carousel-caption d-none d-block">
+                                <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                                <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item"> 
+                            <img class="d-block img-fluid"
+                                src="img/alberto.png" alt="uthappizza">
+                            <div class="carousel-caption d-none d-block">
+                                <h2 class="mt-0">Alberto Somayya</h2>
+                                <h4>Executive Chef</h4>
+                                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators"> 
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev" style="z-index: 1;">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next" style="z-index: 1;">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    );
+  }
+ }
 
 export default Slider;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from "jquery";
 
 /*function test(){
     var tabsNewAnim = $('#navbarSupportedContent');
@@ -38,8 +39,8 @@ import React, { Component } from 'react';
   $(".navbar-toggler").click(function(){
     setTimeout(function(){ test(); });
   });
-
 */
+
 class Trial extends Component{
     render(){
         return(
