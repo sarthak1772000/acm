@@ -19,19 +19,19 @@ import {
                     <div className="carousel-inner" role="listbox">
                         <div className="carousel-item active"> 
                             <img className="d-block img-fluid img-responsive"
-                                src="images/jagrutiMarathiposter08@8x.png" alt="uthappizza" />
+                                src={require('./images/jagrutiMarathiposter08@8x.png')} alt="uthappizza" />
                             <div className="carousel-caption d-none d-block">
                             </div>
                         </div>
                         <div className="carousel-item"> 
                             <img className="d-block img-fluid img-responsive"
-                                src="images/HckEarthDisplay@.png" alt="uthappizza" />
+                                src={require('./images/HckEarthDisplay@8x.png')} alt="uthappizza" />
                             <div className="carousel-caption d-none d-block">
                             </div>
                         </div>
                         <div className="carousel-item"> 
                             <img className="d-block img-fluid img-responsive"
-                                src="images/hackathon_main_poster@8x.png" alt="uthappizza" />
+                                src={require('./images/hackathon_main_poster@8x.png')} alt="uthappizza" />
                             <div className="carousel-caption d-none d-block">
                             </div>
                         </div>
@@ -87,6 +87,8 @@ import {
               </div>
           </div>
         </div>
+        <br/>
+        <br/>             
         <div className="row">
           <div className="col-12 align-items-center">
           <ul className="nav nav-tabs">
