@@ -8,16 +8,8 @@ class Home extends Component{
     render() {
         return(
             <div>
-                <Header />
-                <div className="row">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 self-align-center">
-                                <Slider />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <Header />                
+                <Slider />    
                 <Footer />
             </div>
         );
