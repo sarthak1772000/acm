@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem,Button } from 'reactstrap';
+import {Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem,Button, Jumbotron } from 'reactstrap';
 
 class Header extends Component{
 
@@ -20,6 +20,7 @@ class Header extends Component{
 
     render() {
         return(
+            <React.Fragment>
             <Navbar dark expand="md">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
@@ -59,6 +60,16 @@ class Header extends Component{
                         </Collapse>
                     </div>
                 </Navbar>
+                <Jumbotron>
+                <div className="container">
+                        <div className="row row-header">
+                            <div className="col-12 col-sm-6">
+                                <h1>WCE ACM STUDENT CHAPTER</h1>
+                            </div>      
+                        </div>
+                    </div>
+                </Jumbotron>
+                </React.Fragment>
         );
     }
 }

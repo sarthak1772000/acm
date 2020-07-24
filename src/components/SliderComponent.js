@@ -8,73 +8,7 @@ import {
   CarouselCaption,
   Container, Row, Col
 } from 'reactstrap';
-/*
-  const items = [
-  {
-    src: '../../public/images/hackathon_main_poster@8x.png',
-    altText: 'Slide 1',
-    caption: 'Slide 1'
-  },
-  {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa20%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.3%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
-  },
-  {
-    src: 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.3%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
-  }
-];
 
-const Slider = (props) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
-
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
-  }
-
-  const previous = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
-  }
-
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  }
-
-  const slides = items.map((item) => {
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <img classNameName="image-responsive" src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-      </CarouselItem>
-    );
-  });
-
-  return (
-    <Carousel
-      activeIndex={activeIndex}
-      next={next}
-      previous={previous}
-    >
-      <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-      {slides}
-      <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-      <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-    </Carousel>
-  );
-}
-*/
  class Slider extends Component {
   render(){
     return(
@@ -103,7 +37,7 @@ const Slider = (props) => {
                         </div>
                     </div>
                     <ol className="carousel-indicators"> 
-                        <li data-target="#mycarousel" data-slide-to="0" className="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="0" classNameName="active"></li>
                         <li data-target="#mycarousel" data-slide-to="1"></li>
                         <li data-target="#mycarousel" data-slide-to="2"></li>
                     </ol>
@@ -115,6 +49,83 @@ const Slider = (props) => {
                     </a>
               </div>
             </div>
+        </div>
+        <br/>
+        <br/>
+        <div className="row">
+          <div className="col-12 col-sm-4">
+          <div className="row">
+                <div className="col-md-3">
+                  <span className="fa fa-eye fa-4x col-sm-2"></span>
+                </div>
+                <div className="col-md">
+                  <h4>Our Vision</h4>
+                  <p>Promoting &amp; Enhancing knowledge &amp; innovation amongst our students and making them more aware of IT industry for excellence in their career.</p>
+                </div>
+              </div>
+          </div>
+          <div className="col-12 col-sm-4">
+          <div className="row">
+                <div className="col-md-3">
+                  <span className="fa fa-flag fa-4x col-sm-2"></span>
+                </div>
+                <div className="col-md">
+                  <h4>Our Mission</h4>
+                  <p>To Become a Leading Association to provide learning opportunities for students through various activities to achieve technical expertise.</p>
+                </div>
+              </div>
+          </div>
+          <div className="col-12 col-sm-4">
+              <div className="row">
+                <div className="col-md-3">
+                  <span className="fa fa-magic fa-4x col-sm-2"></span>
+                </div>
+                <div className="col-md">
+                  <h4>Our Inspiration</h4>
+                  <p>ACM, ACM India &amp; WCE Sangli are our true inspiration. Their active efforts towards science &amp; technology motivates us to keep doing our work.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12 align-items-center">
+          <ul className="nav nav-tabs">
+                    <li className="nav-item">
+                        <a className="nav-link active" href="#peter"
+                            role="tab" data-toggle="tab"><span className="fa fa-question fa-2x"></span>Who We Are?</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#danny" role="tab"
+                          data-toggle="tab"><span className="fa fa-question fa-2x"></span>What Do We Do?</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#agumbe"role="tab"
+                          data-toggle="tab"><span className="fa fa-question fa-2x"></span>Why You Should Join Us?</a>
+                    </li>
+                </ul>
+
+                <div className="tab-content">
+                    <div role="tabpanel" className="tab-pane fade show active" id="peter">
+                        <p>
+                          <strong>WCE ACM Student Chapter</strong> was formed to introduce students to an educational and scientific Association &amp; develop the habbit of professional growth achieved through participation in local chapters. WCE ACM Student Chapter is a group of ignited minds boosted by the technology & computer science who have come together to contribute towards the development of computer community.<br/><br/>
+                          <strong>WCE ACM Student Chapter</strong> was formed by the Department of Computer Science and Engineering, WCE Sangli. The chapter mainly consists of students from UG &amp; PG with Computer Science / IT as major. The chapter officially represents the ACM & ACM India in the Sangli-Kolhapur region. We are the only ACM Student Chapter formed in the western Maharashtra.
+                        </p>
+                    </div>
+
+                    <div role="tabpanel" className="tab-pane fade" id="danny"> 
+                        <p>
+                          Content
+                        </p>
+                    </div>
+
+                    <div role="tabpanel" className="tab-pane fade" id="agumbe"> 
+                        <p>
+                          Content
+                        </p>
+                    </div>
+
+                </div>
+          </div>
         </div>
       </div>
     );
