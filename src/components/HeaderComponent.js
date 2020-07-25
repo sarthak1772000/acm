@@ -25,7 +25,9 @@ class Header extends Component{
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
                         <NavbarBrand className="mr-auto" href="/">
-                            ACM
+                            <img className="d-block img-fluid img-responsive"
+                                src={require('./images/acm.png')} alt="ACM" 
+                            />
                         </NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
@@ -41,7 +43,12 @@ class Header extends Component{
                                 </NavItem>
                                 <NavItem>
                                     <a className="nav-link" to="#">
-                                        <span className="fa fa-list fa-lg"></span> Menu
+                                        <span className="fa fa-pencil fa-lg"></span> Activities
+                                    </a>
+                                </NavItem>
+                                <NavItem>
+                                    <a className="nav-link" to="#">
+                                        <span className="fa fa-edit fa-lg"></span> Blog
                                     </a>
                                 </NavItem>
                                 <NavItem>
