@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem,Button, Jumbotron } from 'reactstrap';
+import { Navlink, NavLink } from 'react-router-dom';
 
 class Header extends Component{
 
@@ -32,19 +33,37 @@ class Header extends Component{
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                                 <NavItem>
-                                    <a className="nav-link" href="#">
+                                    <NavLink className="nav-link" to="/home">
                                         <span className="fa fa-home fa-lg"></span> Home
-                                    </a>
+                                    </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <a className="nav-link" to="#">
-                                        <span className="fa fa-info fa-lg"></span> About Us
-                                    </a>
+                                    <div className="dropdown">
+                                        <a className="nav-link dropdown-toggle" to="#" data-toggle="dropdown">
+                                            <span className="fa fa-info fa-lg"></span> About Us 
+                                        </a>
+                                        <div className="dropdown-menu">
+                                            <NavLink className="dropdown-item nav-link" to="/aboutus">About<span className="fa fa-info pull-right"></span></NavLink>
+                                            <a className="dropdown-item" href="#">Main Board<span className="fa fa-group pull-right"></span></a>
+                                            <a className="dropdown-item" href="#">Assistant Board<span className="fa fa-group"></span></a>
+                                            <a className="dropdown-item" href="#">Members<span className="fa fa-group pull-right"></span></a>
+                                            <a className="dropdown-item" href="#">Alumni<span className="fa fa-group pull-right"></span></a>
+                                        </div>
+                                    </div>
                                 </NavItem>
                                 <NavItem>
-                                    <a className="nav-link" to="#">
-                                        <span className="fa fa-pencil fa-lg"></span> Activities
-                                    </a>
+                                    <div className="dropdown">
+                                        <a className="nav-link dropdown-toggle" to="#" data-toggle="dropdown">
+                                            <span className="fa fa-pencil fa-lg"></span> Activities
+                                        </a>
+                                        <div className="dropdown-menu">
+                                            <a className="dropdown-item" href="#">Events<span className="fa fa-pencil fa-lg pull-right"></span></a>
+                                            <a className="dropdown-item" href="#">Sessions<span className="fa fa-pencil fa-lg pull-right"></span></a>
+                                            <a className="dropdown-item" href="#">Projects<span className="fa fa-pencil fa-lg pull-right"></span></a>
+                                            <a className="dropdown-item" href="#">Research Symposium<span className="fa fa-pencil fa-lg "></span></a>
+                                            <a className="dropdown-item" href="#">View All Activities<span className="fa fa-pencil fa-lg pull-right"></span></a>
+                                        </div>
+                                    </div>
                                 </NavItem>
                                 <NavItem>
                                     <a className="nav-link" to="#">
@@ -67,15 +86,6 @@ class Header extends Component{
                         </Collapse>
                     </div>
                 </Navbar>
-                <Jumbotron>
-                <div className="container">
-                        <div className="row row-header">
-                            <div className="col-12 col-sm-6">
-                                <h1>WCE ACM STUDENT CHAPTER</h1>
-                            </div>      
-                        </div>
-                    </div>
-                </Jumbotron>
                 </React.Fragment>
         );
     }

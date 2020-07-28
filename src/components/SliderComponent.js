@@ -1,13 +1,6 @@
 import React, { useState,Component } from 'react';
 import './patil.css';
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
-  Container, Row, Col
-} from 'reactstrap';
+
 
  class Slider extends Component {
   render(){
