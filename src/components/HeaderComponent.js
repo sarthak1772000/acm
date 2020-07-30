@@ -43,7 +43,7 @@ class Header extends Component{
                                             <span className="fa fa-info fa-lg"></span> About Us 
                                         </a>
                                         <div className="dropdown-menu">
-                                            <NavLink className="dropdown-item nav-link" to="/aboutus">About<span className="fa fa-info pull-right"></span></NavLink>
+                                            <NavLink className="dropdown-item nav-link" id="nav1" to="/aboutus">About<span className="fa fa-info pull-right"></span></NavLink>
                                             <a className="dropdown-item" href="#">Main Board<span className="fa fa-group pull-right"></span></a>
                                             <a className="dropdown-item" href="#">Assistant Board<span className="fa fa-group"></span></a>
                                             <a className="dropdown-item" href="#">Members<span className="fa fa-group pull-right"></span></a>

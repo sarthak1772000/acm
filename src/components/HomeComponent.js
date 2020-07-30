@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron } from 'reactstrap'; 
 import Slider from './SliderComponent';
+import ParticlesBg from 'particles-bg';
 
 class Home extends Component{
     render() {
@@ -15,7 +16,8 @@ class Home extends Component{
                         </div>
                     </div>
                 </Jumbotron>
-                <Slider />    
+                <Slider />   
+                <ParticlesBg type="circle" bg={true} /> 
             </React.Fragment>
         );
     }

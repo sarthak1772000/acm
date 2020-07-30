@@ -1,33 +1,45 @@
 import React, { useState,Component } from 'react';
 import './patil.css';
-
+import Fade from 'react-reveal/Fade';
+import RubberBand from 'react-reveal/RubberBand';
+import Slide from 'react-reveal/Slide';
+import Roll from 'react-reveal/Roll';
+import Zoom from 'react-reveal/Zoom';
+import Flip from 'react-reveal/Flip';
 
  class Slider extends Component {
   render(){
     return(
+      <React.Fragment>
       <div className="container">
         <div className="row row-content">
           <div className="col">
                 <div id="mycarousel" className="carousel slide" data-ride="carousel">
                     <div className="carousel-inner" role="listbox">
+                        <Zoom top>
                         <div className="carousel-item active"> 
                             <img className="d-block img-fluid img-responsive"
                                 src={require('./images/jagrutiMarathiposter08@8x.png')} alt="uthappizza" />
                             <div className="carousel-caption d-none d-block">
                             </div>
                         </div>
+                        </Zoom>
+                        <Flip left>
                         <div className="carousel-item"> 
                             <img className="d-block img-fluid img-responsive"
                                 src={require('./images/HckEarthDisplay@8x.png')} alt="uthappizza" />
                             <div className="carousel-caption d-none d-block">
                             </div>
                         </div>
+                        </Flip>
+                        <Roll left>
                         <div className="carousel-item"> 
                             <img className="d-block img-fluid img-responsive"
                                 src={require('./images/hackathon_main_poster@8x.png')} alt="uthappizza" />
                             <div className="carousel-caption d-none d-block">
                             </div>
                         </div>
+                        </Roll>
                     </div>
                     <ol className="carousel-indicators"> 
                         <li data-target="#mycarousel" data-slide-to="0" classNameName="active"></li>
@@ -45,7 +57,7 @@ import './patil.css';
         </div>
         <br/>
         <br/>
-        <div className="row">
+        <div className="row" aos="fade-up">
           <div className="col-12 col-sm-4">
           <div className="row">
                 <div className="col-md-3">
@@ -81,7 +93,8 @@ import './patil.css';
           </div>
         </div>
         <br/>
-        <br/>             
+        <br/>
+        <Fade bottom>
         <div className="row">
           <div className="col-12 align-items-center">
           <ul className="nav nav-tabs">
@@ -122,7 +135,9 @@ import './patil.css';
                 </div>
           </div>
         </div>
+        </Fade>
       </div>
+      </React.Fragment>
     );
   }
  }

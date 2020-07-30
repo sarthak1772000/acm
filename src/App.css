@@ -168,7 +168,6 @@
 
 .carousel {
 	margin-top: 10px;
-    background: #512DA8;
 }
 
 /*.carousel-item {
@@ -196,4 +195,8 @@
     margin:0px auto;
     background: #9575CD ;
     color:floralwhite;
+}
+ 
+#nav1 {
+	color: black;
 }
