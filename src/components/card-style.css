@@ -1,0 +1,32 @@
+body{
+    background: radial-gradient(#e5e5e5,#ffff,#e5e5e5);
+}
+.card:hover{
+    box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253)!important;
+}
+
+
+.cards-bg{
+  
+    background-color:radial-gradient(#e74444,#ffff,#58d7db); /* Used if the image is unavailable */
+     /* You must set a specified height */
+
+    
+ }
+
+/*.card{
+    width: 20rem;
+}
+.card-body{
+    padding: 3rem 0 !important;
+}
+
+
+
+.card-text{
+    font-size: .9rem;
+    padding: 0.4rem 1.9rem;
+}
+.container-fluid .row{
+    padding-top: 6rem;
+}*/
