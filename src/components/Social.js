@@ -11,8 +11,6 @@ import {
     faFacebookSquare
 } from "@fortawesome/free-brands-svg-icons";
 
-
-
 const Social = () => {
 
     return (
