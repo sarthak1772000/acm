@@ -23,4 +23,5 @@ const Email = () => {
         </React.Fragment>
     );
 };
+
 export default Email;
