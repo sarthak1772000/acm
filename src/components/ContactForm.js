@@ -20,7 +20,6 @@ const Signup = () => {
                             <p className="text-center">
                                Feel free to get in touch!
                             </p>
-
                             <form>
                                 <div className="form-group input-group">
                                     <div className="input-group-prepend">
